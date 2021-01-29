@@ -48,7 +48,9 @@ pipeline {
                 ignoreImageBuildTime:true
             }
         }
-    
+       stage('twistlockPublish') {
+          prismaCloudPublish resultsFilePattern: 'prisma-cloud-scan-results.json' 
+        }
  
         stage('Push Docker Image') {
             when {
