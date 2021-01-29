@@ -49,8 +49,10 @@ pipeline {
             }
         }
        stage('twistlockPublish') {
-          prismaCloudPublish resultsFilePattern: 'prisma-cloud-scan-results.json' 
-        }
+           steps {
+               prismaCloudPublish resultsFilePattern: 'prisma-cloud-scan-results.json' 
+           }
+       }       
  
         stage('Push Docker Image') {
             when {
