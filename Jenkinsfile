@@ -39,7 +39,7 @@ pipeline {
                 prismaCloudScanImage ca: '',
                 cert: '',
                 dockerAddress: 'unix:///var/run/docker.sock',
-                image: 'lcastro/petclinic-spinnaker-jenkins*',
+                image: 'lcastro/petclinic-spinnaker-jenkins:latest',
                 key: '',
                 logLevel: 'info',
                 podmanPath: '',
