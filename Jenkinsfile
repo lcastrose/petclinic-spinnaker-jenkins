@@ -48,7 +48,7 @@ pipeline {
                 ignoreImageBuildTime:true
             }
         }
-    }
+    
     post {
         always {
             // The post section lets you run the publish step regardless of the scan results
@@ -79,4 +79,4 @@ pipeline {
             }
         }
     }
-
+}
