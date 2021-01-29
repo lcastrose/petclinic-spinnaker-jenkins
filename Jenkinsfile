@@ -49,12 +49,7 @@ pipeline {
             }
         }
     
-    post {
-        always {
-            // The post section lets you run the publish step regardless of the scan results
-            prismaCloudPublish resultsFilePattern: 'prisma-cloud-scan-results.json'
-        }
-    }
+ 
         stage('Push Docker Image') {
             when {
                 branch 'master'
